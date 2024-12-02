@@ -20,7 +20,7 @@ export default function Index() {
   }, []);
 
   return (
-    <div style={{ padding: "16px" }}>
+    <div>
       <ProductsPage />
     </div>
   );

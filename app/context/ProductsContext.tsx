@@ -35,7 +35,6 @@ export const ProductsProvider: FunctionComponent<IProductsProviderProps> = ({ ch
   const addProductResponse = (newProductResponse: IProductResponse, next: string | null) => {
     setProductResponseList((prev) => [...prev, newProductResponse]);
     setNextUrl(next);
-    console.log('Next URL:', next);
     if (!next) setIsAllProductsLoaded(true);
   };
 

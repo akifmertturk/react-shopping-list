@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useProducts } from "~/context/ProductsContext";
 import Product from "./Product";
 import { IProductResponse } from "../models/Product";
+import { Button } from "@nextui-org/react";
 
 export default function ProductsPage() {
   const { productResponseList, nextUrl, currentPageIndex, isAllProductsLoaded, addProductResponse, setCurrentPageIndex } = useProducts();
@@ -18,80 +19,52 @@ export default function ProductsPage() {
     const nextPageIndex = currentPageIndex + 1;
     if (!isAllProductsLoaded && nextUrl && nextPageIndex <= productResponseList.length - 1) {
       setLoading(true);
-      const response = await fetch(nextUrl); // Sıradaki sayfa verisini çek
+      const response = await fetch(nextUrl); // Retrieve new products from API
       const data = await response.json();
-      addProductResponse(data as IProductResponse, data.nextUrl); // Yeni ürünleri ve nextUrl'i güncelle
+      addProductResponse(data as IProductResponse, data.nextUrl); // Update context with new data and nextUrl
       setLoading(false);
     }
     setCurrentPageIndex(nextPageIndex);
   };
 
   return (
-    <div style={{ padding: "16px" }}>
-      <h1>Ürün Listesi</h1>
-
+    <div className="p-4">
       {/* Horizontal Product List */}
-      <h2>Yatay Ürünler</h2>
-      <div
-        style={{
-          display: "flex",
-          overflowX: "auto",
-          gap: "16px",
-          paddingBottom: "16px",
-        }}
-      >
+      <div className="flex overflow-x-auto gap-4 pb-4">
         {productResponseList[currentPageIndex]?.horizontalProductList?.map((product) => (
           <Product key={product.code} product={product} />
         ))}
       </div>
 
       {/* Vertical Product List */}
-      <h2>Dikey Ürünler</h2>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gap: "16px",
-        }}
-      >
+      <div className="grid grid-cols-2 gap-4">
         {productResponseList[currentPageIndex]?.productList?.map((product) => (
           <Product key={product.code} product={product} />
         ))}
       </div>
 
-      {/* Daha Fazla Göster Butonu */}
-      <div style={{ display: "flex", gap: "16px", marginTop: "16px" }}>
+      {/* Pagination Buttons */}
+      <div className="flex justify-center m-2 gap-2">
        {currentPageIndex > 0 && (
-         <button
-          onClick={onBackClick}
-          disabled={loading}
-          style={{
-            padding: "8px 16px",
-            backgroundColor: "#6c757d",
-            color: "#fff",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer",
-          }}
+        <Button
+         size="md"
+         variant="ghost"
+         color="default"
+         onPress={onBackClick}
         >
-          {loading ? "Yükleniyor..." : "Geri"}
-        </button>
+         {loading ? "Yükleniyor..." : "Geri"}
+        </Button>
        )}
         {productResponseList[currentPageIndex]?.nextUrl && (
-          <button
-            onClick={onNextClick}
+          <Button
+            size="md"
+            variant="ghost"
+            color="default"
+            onPress={onNextClick}
             disabled={loading}
-            style={{
-              padding: "8px 16px",
-              backgroundColor: "#007bff",
-              color: "#fff",
-              border: "none",
-              borderRadius: "4px",
-              cursor: "pointer",
-            }}
           >
             {loading ? "Yükleniyor..." : "İleri"}
-          </button>
+          </Button>
         )}
       </div>
     </div>

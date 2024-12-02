@@ -1,5 +1,6 @@
 import { useNavigate } from "@remix-run/react";
 import { IProduct } from "../models/Product";
+import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
 interface IProductProps {
   product: IProduct;
@@ -13,24 +14,29 @@ export default function Product({ product }: IProductProps) {
   };
 
   return (
-    <button
-      key={product.code}
-      style={{
-        border: "1px solid #ddd",
-        padding: "16px",
-        borderRadius: "8px",
-        minWidth: "150px",
-        maxWidth: "400px",
-      }}
+    <Card
+      className="pt-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto"
+      shadow="sm"
+      radius="lg"
+      isPressable
       onClick={handleClick}
     >
-      <img
-        src={product.imageUrl}
-        alt={product.name}
-        style={{ width: "100%", height: "auto", marginBottom: "8px" }}
-      />
-      <p>{product.name}</p>
-      <p>${product.price}</p>
-    </button>
+      <CardBody className="flex items-center overflow-visible p-0">
+        <Image
+          src={product.imageUrl}
+          shadow="sm"
+          radius="lg"
+          height={200}
+          className="object-cover h-[140px]"
+          alt={product.name}
+        />
+      </CardBody>
+      <CardFooter className="text-small justify-between flex flex-col">
+        <b>{product.name}</b>
+        <span className="text-default-500">
+          {product.price} ₺
+        </span>
+      </CardFooter>
+    </Card>
   );
 }

@@ -11,7 +11,7 @@ import type { LinksFunction } from "@remix-run/node";
 import { ProductsProvider } from "./context/ProductsContext";
 import Navbar from "./components/Navbar";
 import "./tailwind.css";
-import { NextUIProvider } from "@nextui-org/react";
+import { BreadcrumbItem, Breadcrumbs, NextUIProvider } from "@nextui-org/react";
 import { withEmotionCache } from "@emotion/react";
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material';
 import ClientStyleContext from './src/ClientStyleContext';
@@ -90,6 +90,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <Document title="Akakçe">
       <NextUIProvider>
         <Navbar />
+        <Breadcrumbs className="flex items-center my-2 px-32">
+          <BreadcrumbItem href="/">Anasayfa</BreadcrumbItem>
+          <BreadcrumbItem href="/">Telefon</BreadcrumbItem>
+        </Breadcrumbs>
         {children}
         <ScrollRestoration />
         <Scripts />

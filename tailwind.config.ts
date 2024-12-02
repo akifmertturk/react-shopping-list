@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        "custom-background": "#f0f4f8", // Custom Background Color
+      },
       fontFamily: {
         sans: [
           "Inter",

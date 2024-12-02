@@ -30,10 +30,14 @@ export default function ProductsPage() {
   return (
     <div className="p-4">
       {/* Horizontal Product List */}
-      <div className="flex overflow-x-auto gap-4 pb-4">
-        {productResponseList[currentPageIndex]?.horizontalProductList?.map((product) => (
-          <Product key={product.code} product={product} />
-        ))}
+      <div className="px-28 mb-4">
+        <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">
+          {productResponseList[currentPageIndex]?.horizontalProductList?.map((product) => (
+            <div key={product.code} className="flex-shrink-0 snap-center w-[calc(25%-1rem)] max-w-xs">
+              <Product product={product} />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Vertical Product List */}

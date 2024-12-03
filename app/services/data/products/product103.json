@@ -1,0 +1,16 @@
+{
+  "mkName": "Apple",
+  "productName": "iPhone 15 Pro Max 256 GB",
+  "badge": "En Popüler 3. Cep Telefonu",
+  "rating": 3,
+  "imageUrl": "https://cdn.akakce.com/z/apple/iphone-15-pro-max.jpg",
+  "storageOptions": [
+    "128GB",
+    "256GB",
+    "1TB"
+  ],
+  "countOfPrices": 88,
+  "price": 71999,
+  "freeShipping": true,
+  "lastUpdate": "now"
+}

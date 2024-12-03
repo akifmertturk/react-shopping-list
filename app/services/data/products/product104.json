@@ -1,0 +1,16 @@
+{
+  "mkName": "Apple",
+  "productName": "iPhone 15 128 GB",
+  "badge": "En Popüler 4. Cep Telefonu",
+  "rating": 4,
+  "imageUrl": "https://cdn.akakce.com/z/apple/iphone-15.jpg",
+  "storageOptions": [
+    "128GB",
+    "256GB",
+    "512GB"
+  ],
+  "countOfPrices": 94,
+  "price": 49449,
+  "freeShipping": true,
+  "lastUpdate": "yesterday"
+}

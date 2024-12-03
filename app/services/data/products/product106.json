@@ -1,0 +1,16 @@
+{
+  "mkName": "Xiaomi",
+  "productName": "Xiaomi Redmi Note 13 Pro 512 GB 12 GB",
+  "badge": "En Popüler 6. Cep Telefonu",
+  "rating": 2,
+  "imageUrl": "https://cdn.akakce.com/z/xiaomi/xiaomi-redmi-note-13-pro-512-gb.jpg",
+  "storageOptions": [
+    "128GB",
+    "256GB",
+    "512GB"
+  ],
+  "countOfPrices": 94,
+  "price": 49449,
+  "freeShipping": true,
+  "lastUpdate": "now"
+}

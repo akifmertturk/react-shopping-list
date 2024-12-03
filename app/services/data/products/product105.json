@@ -1,0 +1,15 @@
+{
+  "mkName": "Apple",
+  "productName": "Samsung Galaxy S23 256 GB",
+  "badge": "En Popüler 5. Cep Telefonu",
+  "rating": 3,
+  "imageUrl": "https://cdn.akakce.com/z/samsung/samsung-galaxy-s23-256-gb.jpg",
+  "storageOptions": [
+    "128GB",
+    "256GB"
+  ],
+  "countOfPrices": 73,
+  "price": 27799,
+  "freeShipping": true,
+  "lastUpdate": "now"
+}

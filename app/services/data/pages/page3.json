@@ -1,0 +1,65 @@
+{
+  "productList": [
+    {
+      "code": 101,
+      "name": "Iphone 13 128 GB",
+      "imageUrl": "https://cdn.akakce.com/x/apple/iphone-13.jpg",
+      "dropRatio": 5,
+      "price": 20567,
+      "countOfPrices": 96,
+      "followCount": 5000,
+      "url": "https://mock.akakce.dev/product101.json"
+    },
+    {
+      "code": 102,
+      "name": "Xiaomi Redmi Note 13 Pro 256 GB 8 GB",
+      "imageUrl": "https://cdn.akakce.com/z/xiaomi/xiaomi-redmi-note-13-pro.jpg",
+      "dropRatio": 10,
+      "price": 11376,
+      "countOfPrices": 77,
+      "followCount": 500,
+      "url": "https://mock.akakce.dev/product102.json"
+    },
+    {
+      "code": 103,
+      "name": "iPhone 15 Pro Max 256 GB",
+      "imageUrl": "https://cdn.akakce.com/z/apple/iphone-15-pro-max.jpg",
+      "dropRatio": 7,
+      "price": 71999,
+      "countOfPrices": 88,
+      "followCount": 1000,
+      "url": "https://mock.akakce.dev/product103.json"
+    },
+    {
+      "code": 104,
+      "name": "iPhone 15 128 GB",
+      "imageUrl": "https://cdn.akakce.com/z/apple/iphone-15.jpg",
+      "dropRatio": 3,
+      "price": 49449,
+      "countOfPrices": 94,
+      "followCount": 700,
+      "url": "https://mock.akakce.dev/product104.json"
+    },
+    {
+      "code": 105,
+      "name": "Samsung Galaxy S23 256 GB",
+      "imageUrl": "https://cdn.akakce.com/z/samsung/samsung-galaxy-s23-256-gb.jpg",
+      "dropRatio": 5,
+      "price": 27799,
+      "countOfPrices": 73,
+      "followCount": 900,
+      "url": "https://mock.akakce.dev/product105.json"
+    },
+    {
+      "code": 106,
+      "name": "Xiaomi Redmi Note 13 Pro 512 GB 12 GB",
+      "imageUrl": "https://cdn.akakce.com/z/xiaomi/xiaomi-redmi-note-13-pro-512-gb.jpg",
+      "dropRatio": 7,
+      "price": 14500,
+      "countOfPrices": 71,
+      "followCount": 650,
+      "url": "https://mock.akakce.dev/product106.json"
+    }
+  ],
+  "nextUrl": ""
+}

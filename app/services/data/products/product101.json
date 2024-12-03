@@ -1,0 +1,16 @@
+{
+  "mkName": "Apple",
+  "productName": "Iphone 13 128 GB",
+  "badge": "En Popüler Cep Telefonu",
+  "rating": 4,
+  "imageUrl": "https://cdn.akakce.com/x/apple/iphone-13.jpg",
+  "storageOptions": [
+    "128GB",
+    "256GB",
+    "1TB"
+  ],
+  "countOfPrices": 96,
+  "price": 20567,
+  "freeShipping": true,
+  "lastUpdate": "now"
+}

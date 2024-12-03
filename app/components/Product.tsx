@@ -1,13 +1,15 @@
 import { useNavigate } from "@remix-run/react";
 import { IProduct } from "../models/Product";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { formatPrice } from "../utils/format";
 
 interface IProductProps {
   product: IProduct;
 }
 
-export default function Product({ product }: IProductProps) {
+const Product = ({ product }: IProductProps) => {
   const navigate = useNavigate();
+  const formattedPrice = formatPrice(product.price);
 
   const handleClick = () => {
     navigate(`/${product.code}`);
@@ -34,9 +36,11 @@ export default function Product({ product }: IProductProps) {
       <CardFooter className="text-small justify-between flex flex-col">
         <b>{product.name}</b>
         <span className="text-default-500">
-          {product.price} ₺
+          {formattedPrice} ₺
         </span>
       </CardFooter>
     </Card>
   );
 }
+
+export default Product;

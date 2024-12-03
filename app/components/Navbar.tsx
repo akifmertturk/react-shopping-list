@@ -1,6 +1,6 @@
 import { Link } from "@nextui-org/react";
 
-export default function AppNavbar() {
+const AppNavbar = () => {
   return (
     <div className="w-full border-b border-gray-300 bg-white px-32">
       <div className="container mx-auto py-2 flex items-center">
@@ -11,3 +11,5 @@ export default function AppNavbar() {
     </div>
   );
 }
+
+export default AppNavbar;

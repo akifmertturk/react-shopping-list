@@ -20,8 +20,6 @@ export default function Index() {
   }, []);
 
   return (
-    <div>
-      <ProductsPage />
-    </div>
+    <ProductsPage />
   );
 }

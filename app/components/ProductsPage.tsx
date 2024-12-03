@@ -24,7 +24,7 @@ const HorizontalProductList = ({ products }: { products: IProduct[]}) => (
  * @param {IProduct[]} products - List of products to display
  */
 const VerticalProductList = ({ products }: { products: IProduct[]}) => (
-  <div className="grid grid-cols-2 gap-4">
+  <div className="grid grid-cols-2 gap-4 px-32">
     {products.map((product) => (
       <Product key={product.code} product={product} />
     ))}
@@ -71,7 +71,7 @@ export default function ProductsPage() {
   };
 
   return (
-    <div className="p-4">
+    <div>
       {/* Horizontal Product List */}
       <HorizontalProductList products={productResponseList[currentPageIndex]?.horizontalProductList || []} />
 

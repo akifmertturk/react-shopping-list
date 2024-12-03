@@ -6,6 +6,9 @@ html,
 body {
   @apply bg-custom-background dark:bg-gray-950;
 
+  height: 100vh;
+  width: 100vw;
+  
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }

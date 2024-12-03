@@ -23,7 +23,7 @@ export default function ProductDetail() {
     product ?
     (
       <div className="flex mt-4 gap-2 justify-center pl-32 pr-32">
-        <Card className="flex w-full p-16">
+        <Card className="flex w-full p-16" radius="sm">
           <div className="flex flex-col w-full items-center justify-center">
             {/* PRODUCT DETAILS */}
             <div className="w-full grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center">
@@ -55,7 +55,7 @@ export default function ProductDetail() {
                       </div>
                     </div>
                     {/* OPTIONS */}
-                    <span className="mb-5">
+                    <span>
                       <span className="text-sm mb-2">Seçenekler:</span>
                       <div className="flex flex-row gap-1">
                         {product.storageOptions.map((option) => (
@@ -63,6 +63,7 @@ export default function ProductDetail() {
                         ))}
                       </div>
                     </span>
+                    <hr className="w-full my-5" style={{ color: "#999" }} />
                     {/* PRICE & SHIPPING */}
                     <span className="mb-5">
                         <span className="mr-3 text-xl font-bold">

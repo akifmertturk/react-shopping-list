@@ -15,7 +15,7 @@ export default function Product({ product }: IProductProps) {
 
   return (
     <Card
-      className="pt-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto"
+      className="pt-4 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto"
       shadow="sm"
       radius="lg"
       isPressable

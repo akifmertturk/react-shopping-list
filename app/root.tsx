@@ -9,14 +9,14 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import { ProductsProvider } from "./context/ProductsContext";
-import Navbar from "./components/Navbar";
-import "./tailwind.css";
+import "app/styles/tailwind.css";
 import { BreadcrumbItem, Breadcrumbs, NextUIProvider } from "@nextui-org/react";
 import { withEmotionCache } from "@emotion/react";
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material';
 import ClientStyleContext from './src/ClientStyleContext';
 import { useContext } from "react";
 import { StyleSheet } from "@emotion/sheet";
+import AppNavbar from "./components/common/Navbar";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -89,7 +89,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Document title="Akakçe">
       <NextUIProvider>
-        <Navbar />
+        <AppNavbar />
         <Breadcrumbs className="flex items-center my-2 px-32">
           <BreadcrumbItem href="/">Anasayfa</BreadcrumbItem>
           <BreadcrumbItem href="/">Telefon</BreadcrumbItem>
